@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1" parallel="tests" thread-count="1">
+ 
+<listeners>
+<listener class-name="listener.TestNGListners"></listener>
+</listeners>
+ 
+  <test name="TestOnChrome">
+       <parameter name="browserName" value="chrome"></parameter>
+       <classes>
+      		<class name="testsmartit.SmartITObjectTest_TestNG"/>
+       </classes>
+   </test> <!-- TestOnChrome -->
+   
+  <test name="TestOnFireFox">
+      <parameter name="browserName" value="firefox"></parameter>
+      <classes>
+     		 <class name="testsmartit.SmartITObjectTest_TestNG"/>
+   	  </classes>
+  </test> <!-- TestOnFireFox -->
+  
+</suite> <!-- Suite1 -->

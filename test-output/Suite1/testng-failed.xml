@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="tests">
+  <listeners>
+    <listener class-name="listener.TestNGListners"/>
+  </listeners>
+  <test thread-count="2" name="TestOnFireFox(failed)" parallel="tests">
+    <parameter name="browserName" value="firefox"/>
+    <classes>
+      <class name="testsmartit.SmartITObjectTest_TestNG">
+        <methods>
+          <include name="globalSearch" invocation-numbers="3 4"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testsmartit.SmartITObjectTest_TestNG -->
+    </classes>
+  </test> <!-- TestOnFireFox(failed) -->
+  <test thread-count="2" name="TestOnChrome(failed)" parallel="tests">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="testsmartit.SmartITObjectTest_TestNG">
+        <methods>
+          <include name="globalSearch" invocation-numbers="1 2 3 4"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testsmartit.SmartITObjectTest_TestNG -->
+    </classes>
+  </test> <!-- TestOnChrome(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
